@@ -1,238 +1,115 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>MontTech PCs - Montagem de Computadores</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section id="profissionais">
+    <h2>Equipe de profissionais</h2>
 
-<header>
-    <h1>MontTech PCs</h1>
-    <p>Montagem profissional de computadores sob medida para você</p>
-</header>
-
-<nav>
-    <a href="#servicos">Serviços</a>
-    <a href="#profissionais">Profissionais</a>
-    <a href="#orcamento">Orçamento</a>
-    <a href="#pecas">Peças recomendadas</a>
-</nav>
-
-<main>
-
-    <!-- Apresentação / Introdução -->
-    <section id="inicio">
-        <h2>Bem-vindo à MontTech PCs</h2>
-        <p>
-            Somos uma empresa especializada na <strong>montagem de computadores personalizados</strong>,
-            focada em atender as necessidades de cada cliente: seja para estudos, trabalho, jogos,
-            edição de vídeo ou servidores.
-        </p>
-        <p>
-            Nosso objetivo é ajudar você a escolher as melhores peças dentro do seu orçamento,
-            entregando um computador <strong>otimizado, limpo e pronto para uso</strong>.
-        </p>
-    </section>
-
-    <!-- Serviços para clientes -->
-    <section id="servicos">
-        <h2>Serviços oferecidos</h2>
-        <ul>
-            <li>Montagem completa de computadores (peças trazidas pelo cliente ou compradas com a empresa);</li>
-            <li>Consultoria para escolha de peças de acordo com o orçamento e tipo de uso;</li>
-            <li>Formatação, instalação de sistema operacional e programas básicos;</li>
-            <li>Limpeza interna e troca de pasta térmica;</li>
-            <li>Upgrade de memória RAM, SSD, placa de vídeo e outros componentes;</li>
-            <li>Teste de estabilidade e desempenho após a montagem.</li>
-        </ul>
-        <p>
-            Se você ainda não sabe por onde começar, <strong>role a página</strong> para ver as peças recomendadas e simular
-            um orçamento básico de montagem.
-        </p>
-    </section>
-
-    <!-- Profissionais e contatos -->
-    <section id="profissionais">
-        <h2>Equipe de profissionais</h2>
-
-        <div class="profissionais">
-            <div class="card-profissional">
-                <h3>João Silva</h3>
-                <p><strong>Cargo:</strong> Técnico em Montagem e Manutenção</p>
-                <p><strong>Especialidade:</strong> PCs para escritório e uso geral</p>
-                <div class="contato">
-                    <p><strong>Telefone:</strong> (99) 99999-1111</p>
-                    <p><strong>E-mail:</strong> joao@monttechpcs.com</p>
-                    <p><strong>WhatsApp:</strong> (99) 99999-1111</p>
-                </div>
-            </div>
-
-            <div class="card-profissional">
-                <h3>Maria Oliveira</h3>
-                <p><strong>Cargo:</strong> Especialista em Hardware Gamer</p>
-                <p><strong>Especialidade:</strong> PCs gamers e alto desempenho</p>
-                <div class="contato">
-                    <p><strong>Telefone:</strong> (99) 99999-2222</p>
-                    <p><strong>E-mail:</strong> maria@monttechpcs.com</p>
-                    <p><strong>WhatsApp:</strong> (99) 99999-2222</p>
-                </div>
-            </div>
-
-            <div class="card-profissional">
-                <h3>Carlos Souza</h3>
-                <p><strong>Cargo:</strong> Analista de Workstations</p>
-                <p><strong>Especialidade:</strong> Edição de vídeo, 3D e servidores</p>
-                <div class="contato">
-                    <p><strong>Telefone:</strong> (99) 99999-3333</p>
-                    <p><strong>E-mail:</strong> carlos@monttechpcs.com</p>
-                    <p><strong>WhatsApp:</strong> (99) 99999-3333</p>
-                </div>
+    <div class="profissionais">
+        <div class="card-profissional">
+            <h3>Arthur Gabriel Campos Arouche</h3>
+            <p><strong>Cargo:</strong> Técnico em Montagem de Computadores</p>
+            <p><strong>Especialidade:</strong> Montagem e organização interna de PCs</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0001</p>
+                <p><strong>E-mail:</strong> arthur@monttechpcs.com</p>
             </div>
         </div>
-    </section>
 
-    <!-- Orçamento de montagem -->
-    <section id="orcamento">
-        <h2>Simulador de orçamento de montagem</h2>
-        <p>
-            Preencha os campos abaixo para ter uma <strong>estimativa simples</strong> do valor da montagem e do custo total
-            do computador (somando peças + serviço).
-        </p>
-
-        <form class="orcamento-form" onsubmit="calcularOrcamento(event)">
-            <label for="nome">Seu nome (opcional):</label>
-            <input type="text" id="nome" placeholder="Ex: Ana, Pedro...">
-
-            <label for="tipo-uso">Tipo de uso do computador:</label>
-            <select id="tipo-uso" required>
-                <option value="">Selecione...</option>
-                <option value="escritorio">Escritório / Estudos</option>
-                <option value="gamer">Jogos</option>
-                <option value="edicao">Edição de vídeo / Design</option>
-                <option value="basico">Uso básico (internet, filmes)</option>
-            </select>
-
-            <label for="nivel">Nível da máquina:</label>
-            <select id="nivel" required>
-                <option value="">Selecione...</option>
-                <option value="entrada">Básico / Entrada</option>
-                <option value="intermediario">Intermediário</option>
-                <option value="avancado">Avançado</option>
-            </select>
-
-            <label for="orcamento-cliente">Seu orçamento aproximado para peças (R$):</label>
-            <input type="number" id="orcamento-cliente" min="0" placeholder="Ex: 2500">
-
-            <button type="submit">Calcular orçamento sugerido</button>
-        </form>
-
-        <div id="resultado-orcamento"></div>
-    </section>
-
-    <!-- Peças boas e baratas x caras e duradouras -->
-    <section id="pecas">
-        <h2>Peças recomendadas para montar seu PC</h2>
-        <p>
-            Abaixo estão alguns exemplos de peças <strong>boas e baratas</strong> e peças <strong>caras e mais duradouras</strong>.
-            Os modelos são apenas sugestões gerais e podem variar com o tempo e com promoções.
-        </p>
-
-        <div class="tabelas-pecas">
-            <!-- Boas e baratas -->
-            <div>
-                <h3>Peças boas e baratas</h3>
-                <table>
-                    <tr>
-                        <th>Componente</th>
-                        <th>Sugestão</th>
-                        <th>Indicação de uso</th>
-                    </tr>
-                    <tr>
-                        <td>Processador</td>
-                        <td>Intel Core i3 / AMD Ryzen 3</td>
-                        <td>Escritório, estudos, uso básico</td>
-                    </tr>
-                    <tr>
-                        <td>Memória RAM</td>
-                        <td>8 GB DDR4</td>
-                        <td>Uso geral, navegação, documentos</td>
-                    </tr>
-                    <tr>
-                        <td>Armazenamento</td>
-                        <td>SSD 240–480 GB</td>
-                        <td>Inicialização rápida e arquivos leves</td>
-                    </tr>
-                    <tr>
-                        <td>Placa de vídeo</td>
-                        <td>GTX 1650 / RX 6500 XT (ou equivalente)</td>
-                        <td>Jogos leves e moderados</td>
-                    </tr>
-                    <tr>
-                        <td>Fonte</td>
-                        <td>500W 80 Plus básica</td>
-                        <td>Configurações de entrada</td>
-                    </tr>
-                    <tr>
-                        <td>Gabinete</td>
-                        <td>Gabinete simples com ventilação frontal</td>
-                        <td>Uso doméstico</td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- Caras e duradouras -->
-            <div>
-                <h3>Peças caras e duradouras</h3>
-                <table>
-                    <tr>
-                        <th>Componente</th>
-                        <th>Sugestão</th>
-                        <th>Indicação de uso</th>
-                    </tr>
-                    <tr>
-                        <td>Processador</td>
-                        <td>Intel Core i7/i9 / AMD Ryzen 7/9</td>
-                        <td>Jogos pesados, edição, 3D, multitarefa</td>
-                    </tr>
-                    <tr>
-                        <td>Memória RAM</td>
-                        <td>16–32 GB DDR4/DDR5</td>
-                        <td>Projetos grandes, edição pesada, VMs</td>
-                    </tr>
-                    <tr>
-                        <td>Armazenamento</td>
-                        <td>SSD NVMe 1 TB ou mais</td>
-                        <td>Carregamento muito rápido, grandes arquivos</td>
-                    </tr>
-                    <tr>
-                        <td>Placa de vídeo</td>
-                        <td>RTX 4060/4070+ ou RX série 7000</td>
-                        <td>Jogos AAA, edição 4K, renderização</td>
-                    </tr>
-                    <tr>
-                        <td>Fonte</td>
-                        <td>650–850W 80 Plus Gold</td>
-                        <td>Maior estabilidade e durabilidade</td>
-                    </tr>
-                    <tr>
-                        <td>Gabinete</td>
-                        <td>Gabinete premium com ótimo fluxo de ar</td>
-                        <td>Melhor refrigeração e organização</td>
-                    </tr>
-                </table>
+        <div class="card-profissional">
+            <h3>Ashele Raquele Pereira Fonseca</h3>
+            <p><strong>Cargo:</strong> Consultora de Hardware</p>
+            <p><strong>Especialidade:</strong> Escolha de peças de bom custo-benefício</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0002</p>
+                <p><strong>E-mail:</strong> ashele@monttechpcs.com</p>
             </div>
         </div>
-    </section>
 
-</main>
+        <div class="card-profissional">
+            <h3>Clara Vitoria</h3>
+            <p><strong>Cargo:</strong> Suporte ao Cliente</p>
+            <p><strong>Especialidade:</strong> Acompanhamento de pedidos e pós-venda</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0003</p>
+                <p><strong>E-mail:</strong> clara@monttechpcs.com</p>
+            </div>
+        </div>
 
-<footer>
-    &copy; 2025 MontTech PCs - Montagem de Computadores Personalizados
-</footer>
+        <div class="card-profissional">
+            <h3>Joana Ribeiro da Silva</h3>
+            <p><strong>Cargo:</strong> Especialista em Montagem</p>
+            <p><strong>Especialidade:</strong> PCs para escritório e estudos</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0004</p>
+                <p><strong>E-mail:</strong> joana@monttechpcs.com</p>
+            </div>
+        </div>
 
-<script src="script.js"></script>
-</body>
-</html>
+        <div class="card-profissional">
+            <h3>João Pedro de Paiva Matos</h3>
+            <p><strong>Cargo:</strong> Técnico em Manutenção</p>
+            <p><strong>Especialidade:</strong> Diagnóstico e reparo de hardware</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0005</p>
+                <p><strong>E-mail:</strong> joaopedro@monttechpcs.com</p>
+            </div>
+        </div>
 
+        <div class="card-profissional">
+            <h3>Kaua Feitosa</h3>
+            <p><strong>Cargo:</strong> Técnico em Suporte Técnico</p>
+            <p><strong>Especialidade:</strong> Instalação de sistema e programas</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0006</p>
+                <p><strong>E-mail:</strong> kaua@monttechpcs.com</p>
+            </div>
+        </div>
 
+        <div class="card-profissional">
+            <h3>Larissa Bianca Dias Souza</h3>
+            <p><strong>Cargo:</strong> Analista de Workstations</p>
+            <p><strong>Especialidade:</strong> Máquinas para edição de vídeo e design</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0007</p>
+                <p><strong>E-mail:</strong> larissa@monttechpcs.com</p>
+            </div>
+        </div>
+
+        <div class="card-profissional">
+            <h3>Ludimila Vilar Garces</h3>
+            <p><strong>Cargo:</strong> Consultora Gamer</p>
+            <p><strong>Especialidade:</strong> PCs gamer e alto desempenho</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0008</p>
+                <p><strong>E-mail:</strong> ludimila@monttechpcs.com</p>
+            </div>
+        </div>
+
+        <div class="card-profissional">
+            <h3>Nadson Matheus Pereira Bezerra</h3>
+            <p><strong>Cargo:</strong> Técnico em Upgrades</p>
+            <p><strong>Especialidade:</strong> Troca de peças e otimização de PCs antigos</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0009</p>
+                <p><strong>E-mail:</strong> nadson@monttechpcs.com</p>
+            </div>
+        </div>
+
+        <div class="card-profissional">
+            <h3>Yan Victor Balata Castelo Branco</h3>
+            <p><strong>Cargo:</strong> Especialista em Desempenho</p>
+            <p><strong>Especialidade:</strong> Testes, benchmarks e overclock básico</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0010</p>
+                <p><strong>E-mail:</strong> yan@monttechpcs.com</p>
+            </div>
+        </div>
+
+        <div class="card-profissional">
+            <h3>Yasminn Vivian Paiva de Oliveira</h3>
+            <p><strong>Cargo:</strong> Atendente e Consultora</p>
+            <p><strong>Especialidade:</strong> Atendimento ao cliente e orientação de compras</p>
+            <div class="contato">
+                <p><strong>Telefone:</strong> (99) 90000-0011</p>
+                <p><strong>E-mail:</strong> yasminn@monttechpcs.com</p>
+            </div>
+        </div>
+    </div>
+</section>
