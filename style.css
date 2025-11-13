@@ -1,92 +1,55 @@
-/* ======== ESTILO KARMA – ALIEN STAGE ======== */
-
 body {
-    font-family: "Georgia", serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: #000; /* fundo preto */
-    color: #e2e2e2; /* cinza claro elegante */
+    background-color: #f4f4f4;
 }
-
-/* ======== HEADER ======== */
 
 header {
+    background-color: #1e88e5;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 50px 20px 25px; /* AUMENTEI espaço */
-    background: linear-gradient(to bottom, #000000 40%, #1a0000 100%);
-    border-bottom: 2px solid #4a0000;
 }
 
-/* Título com estilo da logo KARMA */
 header h1 {
     margin: 0;
-    font-size: 4rem; /* AUMENTEI a fonte */
-    letter-spacing: 8px;
-    font-weight: bold;
-    color: #b40000; /* vermelho escuro inspirado em KARMA */
-    text-shadow: 
-        0 0 10px #800000,
-        0 0 25px #300000,
-        0 0 40px #000;
 }
-
-header p {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    color: #d6d6d6;
-}
-
-/* ======== MENU ======== */
 
 nav {
-    background-color: #0a0a0a;
-    padding: 18px; /* AUMENTEI espaço entre nome e botões */
+    background-color: #1565c0;
+    padding: 10px;
     text-align: center;
-    border-bottom: 2px solid #4a0000;
 }
 
 nav a {
-    color: #d6d6d6;
+    color: #fff;
     text-decoration: none;
-    margin: 0 18px;
+    margin: 0 15px;
     font-weight: bold;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-
-    transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: #ff1c1c; 
-    text-shadow: 0 0 10px #4a0000;
+    text-decoration: underline;
 }
-
-/* ======== ÁREA PRINCIPAL ======== */
 
 main {
     max-width: 1000px;
-    margin: 40px auto;
+    margin: 20px auto;
     padding: 0 15px;
 }
 
 section {
-    background-color: #0d0d0d;
-    margin-bottom: 25px;
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid #3b0000;
-    box-shadow: 0 0 12px #200000;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 section h2 {
     margin-top: 0;
-    color: #ff1c1c;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 0 0 12px #4a0000;
+    color: #1565c0;
 }
-
-/* ======== PROFISSIONAIS ======== */
 
 .profissionais {
     display: flex;
@@ -96,75 +59,56 @@ section h2 {
 
 .card-profissional {
     flex: 1 1 280px;
-    border: 1px solid #4a0000;
-    border-radius: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 15px;
-    background-color: #121212;
-    box-shadow: 0 0 8px #200000;
-
-    transition: 0.3s;
-}
-
-.card-profissional:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px #4a0000;
+    box-shadow: 0 0 3px rgba(0,0,0,0.05);
 }
 
 .card-profissional h3 {
     margin-top: 0;
-    color: #ff3b3b;
-    text-shadow: 0 0 10px #5a0000;
 }
 
-.contato p {
-    color: #bbbbbb;
+.contato {
+    font-size: 0.95em;
+    margin-top: 8px;
 }
-
-/* ======== ORÇAMENTO ======== */
 
 .orcamento-form label {
-    color: #c7c7c7;
-    font-size: 0.95rem;
+    display: block;
+    margin: 8px 0 4px;
+    font-weight: bold;
 }
 
 .orcamento-form input,
-.orcamento-form select {
+.orcamento-form select,
+.orcamento-form button {
     width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #3a0000;
-    background-color: #0a0a0a;
-    color: #fff;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .orcamento-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #b40000;
+    background-color: #1e88e5;
     color: #fff;
     border: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    border-radius: 4px;
+    font-size: 1em;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .orcamento-form button:hover {
-    background-color: #ff1c1c;
-    box-shadow: 0 0 15px #4a0000;
+    background-color: #1565c0;
 }
 
 #resultado-orcamento {
     margin-top: 10px;
     padding: 10px;
-    background-color: #150000;
+    background-color: #e3f2fd;
     border-radius: 6px;
-    border: 1px solid #4a0000;
     display: none;
 }
-
-/* ======== TABELAS DE PEÇAS ======== */
 
 .tabelas-pecas {
     display: flex;
@@ -176,28 +120,28 @@ table {
     border-collapse: collapse;
     width: 100%;
     max-width: 450px;
-    color: #e4e4e4;
 }
 
 th, td {
-    border: 1px solid #4a0000;
+    border: 1px solid #ddd;
     padding: 8px;
 }
 
 th {
-    background-color: #110000;
-    color: #ff3b3b;
-    text-shadow: 0 0 8px #5a0000;
+    background-color: #eeeeee;
+    text-align: left;
 }
-
-/* ======== FOOTER ======== */
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #0a0a0a;
-    color: #d6d6d6;
-    border-top: 1px solid #4a0000;
-    margin-top: 40px;
+    padding: 15px;
+    background-color: #1565c0;
+    color: #fff;
+    margin-top: 20px;
 }
 
+@media (max-width: 600px) {
+    nav {
+        font-size: 0.9em;
+    }
+}
